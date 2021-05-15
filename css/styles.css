@@ -1,0 +1,127 @@
+/* 
+Цвет текста:
+  #212121 - заголовки (h2, h3)
+  #757575 - основной серый (в .header-link, p)
+  #2196F3 - hover, Web
+  #FFFFFF - в .hero
+  #FFFFFF 60% - список контактов в футере
+
+Цвет фона:
+  #FFFFFF - основной
+  #2F303A - hero, футер
+  #F5F4FA - наша команда 
+  
+*/
+:root {
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --title-text-color-hero-footer: #ffffff;
+  --accent-color: #2196f3;
+  --background-color-hero-footer: #2f303a;
+  --primary-white-color: #ffffff;
+}
+
+body {
+  color: var(--primary-text-color);
+  background-color: var(--primary-white-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* .logo */
+
+.logo {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.logo-header {
+  color: #000000;
+}
+
+/* Навигация */
+
+.site-nav .link {
+  color: var(--title-text-color);
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus,
+.site-contacts .link:hover,
+.site-contacts .link:focus {
+  color: var(--accent-color);
+}
+
+.site-nav .link.current {
+  color: var(--accent-color);
+}
+
+.site-contacts .link {
+  color: var(--primary-text-color);
+}
+
+/* Hero */
+
+.hero {
+  background-color: var(--background-color-hero-footer);
+}
+
+.hero-title {
+  color: var(--title-text-color-hero-footer);
+}
+
+/* Button */
+
+.button {
+  width: 200px;
+  height: 50px;
+  border-style: none;
+  border-radius: 4px;
+  color: var(--title-text-color-hero-footer);
+  background-color: var(--accent-color);
+}
+
+/* section */
+
+.section-title,
+.heading {
+  color: var(--title-text-color);
+}
+
+/* Особенности */
+
+.feature-list .heading {
+  color: var(--title-text-color);
+}
+
+/* Портфолио */
+
+.work-list .heading {
+  color: var(--title-text-color);
+}
+/* Футер */
+.footer {
+  background-color: var(--background-color-hero-footer);
+}
+
+.logo-footer {
+  color: var(--title-text-color-hero-footer);
+}
+
+.contacts {
+  font-style: normal;
+}
+
+.contacts-text {
+  color: var(--title-text-color-hero-footer);
+}
+
+.footer-contacts .link {
+  color: rgba(255, 255, 255, 0.6);
+}
