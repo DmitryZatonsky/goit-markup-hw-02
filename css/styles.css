@@ -19,11 +19,14 @@
   --accent-color: #2196f3;
   --background-color-hero-footer: #2f303a;
   --primary-white-color: #ffffff;
+  --button-primary-background: #f5f4fa;
 }
 
 body {
   color: var(--primary-text-color);
   background-color: var(--primary-white-color);
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
 }
 
 ul {
@@ -37,8 +40,11 @@ a {
 /* .logo */
 
 .logo {
+  font-family: Raleway, sans-serif;
   color: var(--accent-color);
   text-decoration: none;
+  font-size: 26px;
+  line-height: 1.19;
 }
 
 .logo-header {
@@ -49,6 +55,10 @@ a {
 
 .site-nav .link {
   color: var(--title-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
 }
 
 .site-nav .link:hover,
@@ -64,6 +74,10 @@ a {
 
 .site-contacts .link {
   color: var(--primary-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
 }
 
 /* Hero */
@@ -74,6 +88,12 @@ a {
 
 .hero-title {
   color: var(--title-text-color-hero-footer);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 /* Button */
@@ -85,11 +105,20 @@ a {
   border-radius: 4px;
   color: var(--title-text-color-hero-footer);
   background-color: var(--accent-color);
+  font-family: inherit;
 }
 
 /* section */
 
 .section-title,
+.footer .title {
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
 .heading {
   color: var(--title-text-color);
 }
@@ -98,6 +127,16 @@ a {
 
 .feature-list .heading {
   color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.feature-list .feature-list {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
 }
 
 /* Портфолио */
@@ -105,6 +144,23 @@ a {
 .work-list .heading {
   color: var(--title-text-color);
 }
+
+/* Наша команда */
+
+.our-team .heading {
+  color: var(--title-text-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+}
+
+.our-team .paragraph {
+  color: var(--primary-text-color);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+}
+
 /* Футер */
 .footer {
   background-color: var(--background-color-hero-footer);
@@ -116,6 +172,9 @@ a {
 
 .contacts {
   font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
 }
 
 .contacts-text {
@@ -124,4 +183,35 @@ a {
 
 .footer-contacts .link {
   color: rgba(255, 255, 255, 0.6);
+}
+
+/* Портфолио */
+
+.filter .button {
+  color: var(--title-text-color);
+  background-color: var(--button-primary-background);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+}
+
+.filter .button:hover,
+.filter .button:focus {
+  color: var(--title-text-color-hero-footer);
+  background-color: var(--accent-color);
+}
+
+.gallery-works .heading {
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.gallery-works .paragraph {
+  color: var(--primary-text-color);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.87;
 }
