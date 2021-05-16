@@ -29,13 +29,13 @@ body {
   letter-spacing: 0.03em;
 }
 
-ul {
+/* ul {
   list-style: none;
 }
 
 a {
   text-decoration: none;
-}
+}*/
 
 /* .logo */
 
@@ -54,6 +54,7 @@ a {
 /* Навигация */
 
 .site-nav .link {
+  text-decoration: none;
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -73,6 +74,7 @@ a {
 }
 
 .site-contacts .link {
+  text-decoration: none;
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -119,13 +121,13 @@ a {
   text-align: center;
 }
 
-.heading {
+.section-title .heading {
   color: var(--title-text-color);
 }
 
 /* Особенности */
 
-.feature-list .heading {
+.feature .heading {
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 14px;
@@ -133,15 +135,15 @@ a {
   text-transform: uppercase;
 }
 
-.feature-list .feature-list {
+.feature .paragraph {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
 }
 
-/* Портфолио */
+/* Работы */
 
-.work-list .heading {
+.work .heading {
   color: var(--title-text-color);
 }
 
@@ -182,10 +184,11 @@ a {
 }
 
 .footer-contacts .link {
+  text-decoration: none;
   color: rgba(255, 255, 255, 0.6);
 }
 
-/* Портфолио */
+/* Портфолио .html*/
 
 .filter .button {
   color: var(--title-text-color);
