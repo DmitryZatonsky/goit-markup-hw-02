@@ -37,6 +37,10 @@ a {
   text-decoration: none;
 }*/
 
+.list {
+  list-style: none;
+}
+
 /* .logo */
 
 .logo {
@@ -108,6 +112,8 @@ a {
   color: var(--title-text-color-hero-footer);
   background-color: var(--accent-color);
   font-family: inherit;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* section */
@@ -188,6 +194,11 @@ a {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.footer-contacts .link:hover,
+.footer-contacts .link:focus {
+  color: var(--accent-color);
+}
+
 /* Портфолио .html*/
 
 .filter .button {
@@ -196,6 +207,8 @@ a {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
+  cursor: pointer;
+  padding: 6px 22px;
 }
 
 .filter .button:hover,
