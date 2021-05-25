@@ -20,6 +20,7 @@
   --background-color-hero-footer: #2f303a;
   --primary-white-color: #ffffff;
   --button-primary-background: #f5f4fa;
+  --button-hover: #188ce8;
 }
 
 body {
@@ -114,6 +115,10 @@ a {
   font-family: inherit;
   text-decoration: none;
   cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--button-hover);
 }
 
 /* section */
@@ -230,4 +235,24 @@ a {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
+}
+
+.gallery-works a {
+  text-decoration: none;
+}
+
+/* Прибить заголовки вне макета (списал на GitHab у Репеты)*/
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
