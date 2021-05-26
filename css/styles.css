@@ -9,7 +9,7 @@
 Цвет фона:
   #FFFFFF - основной
   #2F303A - hero, футер
-  #F5F4FA - наша команда 
+  #F5F4FA - фон секции "наша команда"
   
 */
 :root {
@@ -22,8 +22,18 @@
   --button-primary-background: #f5f4fa;
   --button-hover: #188ce8;
 }
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
 body {
+  margin: 0;
   color: var(--primary-text-color);
   background-color: var(--primary-white-color);
   font-family: Roboto, sans-serif;
@@ -39,6 +49,8 @@ a {
 }*/
 
 .list {
+  padding: 0;
+  margin: 0;
   list-style: none;
 }
 
@@ -87,18 +99,29 @@ a {
   letter-spacing: 0.02em;
 }
 
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 /* Hero */
 
 .hero {
+  padding-top: 200px;
   background-color: var(--background-color-hero-footer);
+  text-align: center;
 }
 
 .hero-title {
+  margin-top: 0;
+  margin-bottom: 30;
   color: var(--title-text-color-hero-footer);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -106,8 +129,10 @@ a {
 /* Button */
 
 .button {
-  width: 200px;
-  height: 50px;
+  min-width: 200px;
+  min-height: 50px;
+  padding: 10px 32px;
+  margin-bottom: 200px;
   border-style: none;
   border-radius: 4px;
   color: var(--title-text-color-hero-footer);
@@ -125,6 +150,8 @@ a {
 
 .section-title,
 .footer .title {
+  margin-top: 0;
+  margin-bottom: 0;
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 36px;
@@ -138,7 +165,14 @@ a {
 
 /* Особенности */
 
+.feature {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .feature .heading {
+  margin-top: 0;
+  margin-bottom: 10px;
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 14px;
@@ -147,6 +181,7 @@ a {
 }
 
 .feature .paragraph {
+  margin: 0;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -154,13 +189,41 @@ a {
 
 /* Работы */
 
+.work {
+  padding-bottom: 94px;
+}
+
+.work .section-title {
+  margin-bottom: 50px;
+}
+
 .work .heading {
   color: var(--title-text-color);
 }
 
 /* Наша команда */
 
+.our-team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: var(--button-primary-background);
+}
+.our-team .section-title {
+  margin-bottom: 50px;
+}
+
+.our-team .cards {
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.our-team .img {
+  margin-bottom: 30px;
+}
+
 .our-team .heading {
+  margin-top: 0;
+  margin-bottom: 10px;
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 16px;
@@ -168,6 +231,7 @@ a {
 }
 
 .our-team .paragraph {
+  margin: 0;
   color: var(--primary-text-color);
   font-weight: 400;
   font-size: 16px;
@@ -176,6 +240,7 @@ a {
 
 /* Футер */
 .footer {
+  padding: 60px 0;
   background-color: var(--background-color-hero-footer);
 }
 
@@ -191,6 +256,7 @@ a {
 }
 
 .contacts-text {
+  margin: 0;
   color: var(--title-text-color-hero-footer);
 }
 
@@ -231,6 +297,7 @@ a {
 }
 
 .gallery-works .paragraph {
+  margin: 0;
   color: var(--primary-text-color);
   font-weight: 400;
   font-size: 16px;
@@ -241,7 +308,7 @@ a {
   text-decoration: none;
 }
 
-/* Прибить заголовки вне макета (списал на GitHab у Репеты)*/
+/* Прибить заголовки вне макета (списал на GitHab у Саньки Репеты)*/
 
 .visually-hidden {
   position: absolute;
