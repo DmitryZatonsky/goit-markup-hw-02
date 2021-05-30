@@ -21,6 +21,8 @@
   --primary-white-color: #ffffff;
   --button-primary-background: #f5f4fa;
   --button-hover: #188ce8;
+  /* --gallery-works-number-of-cards-per-line: 3;
+  --gallery-works-margin-per-line: 30px; */
 }
 html {
   box-sizing: border-box;
@@ -34,6 +36,7 @@ html {
 
 body {
   margin: 0;
+
   color: var(--primary-text-color);
   background-color: var(--primary-white-color);
   font-family: Roboto, sans-serif;
@@ -51,12 +54,26 @@ a {
 .list {
   padding: 0;
   margin: 0;
+
   list-style: none;
 }
 
-/* .logo */
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+/* Навигация */
+
+.site {
+  display: flex;
+  align-items: center;
+}
+
+/* logo */
 
 .logo {
+  margin-right: 93px;
+
   font-family: Raleway, sans-serif;
   color: var(--accent-color);
   text-decoration: none;
@@ -68,9 +85,20 @@ a {
   color: #000000;
 }
 
-/* Навигация */
+.site-nav {
+  display: flex;
+}
+
+.site-nav .item:not(:last-child) {
+  /*отступ справа кроме последнего элемента*/
+  margin-right: 50px;
+}
 
 .site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   text-decoration: none;
   color: var(--title-text-color);
   font-weight: 500;
@@ -90,7 +118,21 @@ a {
   color: var(--accent-color);
 }
 
+.site-contacts {
+  display: flex;
+  margin-left: auto;
+}
+
+.site-contacts .item + .item {
+  /*отступ слева у последующего соседа*/
+  margin-left: 50px;
+}
+
 .site-contacts .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   text-decoration: none;
   color: var(--primary-text-color);
   font-weight: 500;
@@ -128,10 +170,10 @@ a {
 
 /* Button */
 
-.button {
+.hero .button {
   min-width: 200px;
   min-height: 50px;
-  padding: 10px 32px;
+  padding: 10px;
   margin-bottom: 200px;
   border-style: none;
   border-radius: 4px;
@@ -166,8 +208,13 @@ a {
 /* Особенности */
 
 .feature {
+  display: flex;
   padding-top: 94px;
   padding-bottom: 94px;
+}
+
+.feature .item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .feature .heading {
@@ -190,6 +237,7 @@ a {
 /* Работы */
 
 .work {
+  display: flex;
   padding-bottom: 94px;
 }
 
@@ -201,6 +249,14 @@ a {
   color: var(--title-text-color);
 }
 
+.work .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.work .item img {
+  display: block;
+}
+
 /* Наша команда */
 
 .our-team {
@@ -210,6 +266,23 @@ a {
 }
 .our-team .section-title {
   margin-bottom: 50px;
+}
+
+.our-team-list {
+  display: flex;
+}
+
+.our-team-list .item {
+  background: #ffffff;
+  /* material shadow v1 */
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.our-team-list .item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .our-team .cards {
@@ -240,8 +313,14 @@ a {
 
 /* Футер */
 .footer {
-  padding: 60px 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--background-color-hero-footer);
+}
+
+.footer .logo {
+  display: inline-block;
+  margin-bottom: 20px;
 }
 
 .logo-footer {
@@ -272,14 +351,30 @@ a {
 
 /* Портфолио .html*/
 
+.filter-decoration {
+  margin-bottom: 50px;
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+}
+
+.filter .item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .filter .button {
+  display: inline-block;
+  padding: 6px 22px;
+  border-radius: 4px;
   color: var(--title-text-color);
   background-color: var(--button-primary-background);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
+  text-align: center;
   cursor: pointer;
-  padding: 6px 22px;
 }
 
 .filter .button:hover,
@@ -288,7 +383,45 @@ a {
   background-color: var(--accent-color);
 }
 
+.gallery-works-decoration {
+  padding: 94px 0;
+}
+
+.gallery-works {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery-works .card-list {
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+  border: 1px solid #eeeeee;
+}
+
+.card-list .decoration {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+}
+
+.card-list:nth-child(3n) {
+  margin-right: 0;
+}
+
+.card-list:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+
+.card-list img {
+  display: block;
+  margin-bottom: 20px;
+}
+
 .gallery-works .heading {
+  margin-top: 0;
+  margin-bottom: 4px;
+
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 18px;
@@ -297,7 +430,9 @@ a {
 }
 
 .gallery-works .paragraph {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0px;
+
   color: var(--primary-text-color);
   font-weight: 400;
   font-size: 16px;
